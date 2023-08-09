@@ -39,9 +39,8 @@ dependencies:
   # Drift ORM for SQLite
   drift: ^2.7.0
 
-
   # * Dependency Injection
-  # Dependency Injection 
+  # Dependency Injection
   injectable: ^2.1.2
   # Service Locator
   get_it: ^7.2.0
@@ -58,35 +57,40 @@ dependencies:
   # * Utilities
   # Toll for UI adaptability
   flutter_screenutil: ^5.8.3
+  #refresh
+  pull_to_refresh: ^2.0.0
   # Cache Image
   cached_network_image: ^3.2.3
-   # Functional Programming in Dart
+  # Functional Programming in Dart
   fpdart: ^0.6.0
 
   # * Annotations
   freezed_annotation: ^2.2.0
   # Factory based Code Generation
   freezed: ^2.3.5
-  
+
   # * Development Utilities
-  # Logging 
+  # Logging
   logger: ^1.1.0
   l: ^4.0.0
-  stack_trace: ^1.11.0
-   # Crash Reporting
+  # mock data generate
+  mocktail: ^1.0.0
+
+  stack_trace:
+    ^1.11.0
+    # Crash Reporting
   sentry_flutter: ^7.4.2
   # Active Internet connection
   internet_connection_checker: ^1.0.0+1
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
- 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-   # * Code Generators
+    # * Code Generators
   # Generating Files
   build_runner: ^2.4.6
   # Generating Serialization of JSON
@@ -101,12 +105,6 @@ dev_dependencies:
   injectable_generator: ^2.1.6
 
   flutter_lints: ^2.0.0
-
-
-
- 
-
-
 
 flutter:
   uses-material-design: true

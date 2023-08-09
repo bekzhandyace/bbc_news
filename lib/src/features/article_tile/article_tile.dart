@@ -1,29 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ArticleTile extends StatefulWidget {
-  final Widget leading;
-  final Widget trailing;
+class ArticleTile extends StatelessWidget {
+  final Widget image;
+  final Widget iconBtn;
   final String title;
-  final String subtitle;
+  final String description;
   final VoidCallback onTap;
-  
 
   const ArticleTile({
     super.key,
-    required this.trailing,
-    required this.leading,
+    required this.iconBtn,
+    required this.image,
     required this.title,
-    required this.subtitle,
+    required this.description,
     required this.onTap,
-   
   });
 
-  @override
-  State<ArticleTile> createState() => _ArticleTileState();
-}
-
-class _ArticleTileState extends State<ArticleTile> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -34,19 +27,19 @@ class _ArticleTileState extends State<ArticleTile> {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              onTap: widget.onTap,
-              leading: widget.leading,
+              onTap: onTap,
+              leading: image,
               title: Text(
-                widget.title,
+                title,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
               subtitle: Text(
-                widget.subtitle,
+                description,
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
               ),
-              trailing: widget.trailing,
+              trailing: iconBtn,
             ),
           ),
         ),

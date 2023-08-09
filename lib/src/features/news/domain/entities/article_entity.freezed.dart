@@ -21,7 +21,7 @@ ArticleEntity _$ArticleEntityFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ArticleEntity {
   String? get author => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   String? get urlToImage => throw _privateConstructorUsedError;
@@ -43,7 +43,7 @@ abstract class $ArticleEntityCopyWith<$Res> {
   @useResult
   $Res call(
       {String? author,
-      String title,
+      String? title,
       String? description,
       String? url,
       String? urlToImage,
@@ -66,7 +66,7 @@ class _$ArticleEntityCopyWithImpl<$Res, $Val extends ArticleEntity>
   @override
   $Res call({
     Object? author = freezed,
-    Object? title = null,
+    Object? title = freezed,
     Object? description = freezed,
     Object? url = freezed,
     Object? urlToImage = freezed,
@@ -79,10 +79,10 @@ class _$ArticleEntityCopyWithImpl<$Res, $Val extends ArticleEntity>
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String?,
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -121,7 +121,7 @@ abstract class _$$_ArticleCopyWith<$Res>
   @useResult
   $Res call(
       {String? author,
-      String title,
+      String? title,
       String? description,
       String? url,
       String? urlToImage,
@@ -141,7 +141,7 @@ class __$$_ArticleCopyWithImpl<$Res>
   @override
   $Res call({
     Object? author = freezed,
-    Object? title = null,
+    Object? title = freezed,
     Object? description = freezed,
     Object? url = freezed,
     Object? urlToImage = freezed,
@@ -154,10 +154,10 @@ class __$$_ArticleCopyWithImpl<$Res>
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String?,
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -205,7 +205,7 @@ class _$_Article implements _Article {
   @override
   final String? author;
   @override
-  final String title;
+  final String? title;
   @override
   final String? description;
   @override
@@ -266,7 +266,7 @@ class _$_Article implements _Article {
 abstract class _Article implements ArticleEntity {
   factory _Article(
       {required final String? author,
-      required final String title,
+      required final String? title,
       required final String? description,
       required final String? url,
       required final String? urlToImage,
@@ -279,7 +279,7 @@ abstract class _Article implements ArticleEntity {
   @override
   String? get author;
   @override
-  String get title;
+  String? get title;
   @override
   String? get description;
   @override

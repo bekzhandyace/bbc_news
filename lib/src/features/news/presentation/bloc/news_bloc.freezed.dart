@@ -18,51 +18,57 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$NewsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
     required TResult Function() loadNews,
-    required TResult Function() loadTopNews,
-    required TResult Function(List<ArticleEntity> articleList) refresh,
+    required TResult Function() refresh,
+    required TResult Function() refreshTopNews,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? init,
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
     TResult? Function()? loadNews,
-    TResult? Function()? loadTopNews,
-    TResult? Function(List<ArticleEntity> articleList)? refresh,
+    TResult? Function()? refresh,
+    TResult? Function()? refreshTopNews,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
     TResult Function()? loadNews,
-    TResult Function()? loadTopNews,
-    TResult Function(List<ArticleEntity> articleList)? refresh,
+    TResult Function()? refresh,
+    TResult Function()? refreshTopNews,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
     required TResult Function(_LoadNews value) loadNews,
-    required TResult Function(_LoadTopNews value) loadTopNews,
-    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
     TResult? Function(_LoadNews value)? loadNews,
-    TResult? Function(_LoadTopNews value)? loadTopNews,
-    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
     TResult Function(_LoadNews value)? loadNews,
-    TResult Function(_LoadTopNews value)? loadTopNews,
-    TResult Function(_Refresh value)? refresh,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -86,70 +92,103 @@ class _$NewsEventCopyWithImpl<$Res, $Val extends NewsEvent>
 }
 
 /// @nodoc
-abstract class _$$_InitCopyWith<$Res> {
-  factory _$$_InitCopyWith(_$_Init value, $Res Function(_$_Init) then) =
-      __$$_InitCopyWithImpl<$Res>;
+abstract class _$$_InitNewsCopyWith<$Res> {
+  factory _$$_InitNewsCopyWith(
+          _$_InitNews value, $Res Function(_$_InitNews) then) =
+      __$$_InitNewsCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ScrollController? scrollController});
 }
 
 /// @nodoc
-class __$$_InitCopyWithImpl<$Res> extends _$NewsEventCopyWithImpl<$Res, _$_Init>
-    implements _$$_InitCopyWith<$Res> {
-  __$$_InitCopyWithImpl(_$_Init _value, $Res Function(_$_Init) _then)
+class __$$_InitNewsCopyWithImpl<$Res>
+    extends _$NewsEventCopyWithImpl<$Res, _$_InitNews>
+    implements _$$_InitNewsCopyWith<$Res> {
+  __$$_InitNewsCopyWithImpl(
+      _$_InitNews _value, $Res Function(_$_InitNews) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? scrollController = freezed,
+  }) {
+    return _then(_$_InitNews(
+      freezed == scrollController
+          ? _value.scrollController
+          : scrollController // ignore: cast_nullable_to_non_nullable
+              as ScrollController?,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Init implements _Init {
-  const _$_Init();
+class _$_InitNews implements _InitNews {
+  const _$_InitNews(this.scrollController);
+
+  @override
+  final ScrollController? scrollController;
 
   @override
   String toString() {
-    return 'NewsEvent.init()';
+    return 'NewsEvent.init(scrollController: $scrollController)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Init);
+        (other.runtimeType == runtimeType &&
+            other is _$_InitNews &&
+            (identical(other.scrollController, scrollController) ||
+                other.scrollController == scrollController));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, scrollController);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InitNewsCopyWith<_$_InitNews> get copyWith =>
+      __$$_InitNewsCopyWithImpl<_$_InitNews>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
     required TResult Function() loadNews,
-    required TResult Function() loadTopNews,
-    required TResult Function(List<ArticleEntity> articleList) refresh,
+    required TResult Function() refresh,
+    required TResult Function() refreshTopNews,
   }) {
-    return init();
+    return init(scrollController);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? init,
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
     TResult? Function()? loadNews,
-    TResult? Function()? loadTopNews,
-    TResult? Function(List<ArticleEntity> articleList)? refresh,
+    TResult? Function()? refresh,
+    TResult? Function()? refreshTopNews,
   }) {
-    return init?.call();
+    return init?.call(scrollController);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
     TResult Function()? loadNews,
-    TResult Function()? loadTopNews,
-    TResult Function(List<ArticleEntity> articleList)? refresh,
+    TResult Function()? refresh,
+    TResult Function()? refreshTopNews,
     required TResult orElse(),
   }) {
     if (init != null) {
-      return init();
+      return init(scrollController);
     }
     return orElse();
   }
@@ -157,10 +196,11 @@ class _$_Init implements _Init {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
     required TResult Function(_LoadNews value) loadNews,
-    required TResult Function(_LoadTopNews value) loadTopNews,
-    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
   }) {
     return init(this);
   }
@@ -168,10 +208,11 @@ class _$_Init implements _Init {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
     TResult? Function(_LoadNews value)? loadNews,
-    TResult? Function(_LoadTopNews value)? loadTopNews,
-    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
   }) {
     return init?.call(this);
   }
@@ -179,10 +220,11 @@ class _$_Init implements _Init {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
     TResult Function(_LoadNews value)? loadNews,
-    TResult Function(_LoadTopNews value)? loadTopNews,
-    TResult Function(_Refresh value)? refresh,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -192,8 +234,134 @@ class _$_Init implements _Init {
   }
 }
 
-abstract class _Init implements NewsEvent {
-  const factory _Init() = _$_Init;
+abstract class _InitNews implements NewsEvent {
+  const factory _InitNews(final ScrollController? scrollController) =
+      _$_InitNews;
+
+  ScrollController? get scrollController;
+  @JsonKey(ignore: true)
+  _$$_InitNewsCopyWith<_$_InitNews> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_LoadingNewsCopyWith<$Res> {
+  factory _$$_LoadingNewsCopyWith(
+          _$_LoadingNews value, $Res Function(_$_LoadingNews) then) =
+      __$$_LoadingNewsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LoadingNewsCopyWithImpl<$Res>
+    extends _$NewsEventCopyWithImpl<$Res, _$_LoadingNews>
+    implements _$$_LoadingNewsCopyWith<$Res> {
+  __$$_LoadingNewsCopyWithImpl(
+      _$_LoadingNews _value, $Res Function(_$_LoadingNews) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_LoadingNews implements _LoadingNews {
+  const _$_LoadingNews();
+
+  @override
+  String toString() {
+    return 'NewsEvent.loadingNews()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_LoadingNews);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
+    required TResult Function() loadNews,
+    required TResult Function() refresh,
+    required TResult Function() refreshTopNews,
+  }) {
+    return loadingNews();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
+    TResult? Function()? loadNews,
+    TResult? Function()? refresh,
+    TResult? Function()? refreshTopNews,
+  }) {
+    return loadingNews?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
+    TResult Function()? loadNews,
+    TResult Function()? refresh,
+    TResult Function()? refreshTopNews,
+    required TResult orElse(),
+  }) {
+    if (loadingNews != null) {
+      return loadingNews();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
+    required TResult Function(_LoadNews value) loadNews,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
+  }) {
+    return loadingNews(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
+    TResult? Function(_LoadNews value)? loadNews,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
+  }) {
+    return loadingNews?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
+    TResult Function(_LoadNews value)? loadNews,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
+    required TResult orElse(),
+  }) {
+    if (loadingNews != null) {
+      return loadingNews(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadingNews implements NewsEvent {
+  const factory _LoadingNews() = _$_LoadingNews;
 }
 
 /// @nodoc
@@ -234,10 +402,11 @@ class _$_LoadNews implements _LoadNews {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
     required TResult Function() loadNews,
-    required TResult Function() loadTopNews,
-    required TResult Function(List<ArticleEntity> articleList) refresh,
+    required TResult Function() refresh,
+    required TResult Function() refreshTopNews,
   }) {
     return loadNews();
   }
@@ -245,10 +414,11 @@ class _$_LoadNews implements _LoadNews {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? init,
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
     TResult? Function()? loadNews,
-    TResult? Function()? loadTopNews,
-    TResult? Function(List<ArticleEntity> articleList)? refresh,
+    TResult? Function()? refresh,
+    TResult? Function()? refreshTopNews,
   }) {
     return loadNews?.call();
   }
@@ -256,10 +426,11 @@ class _$_LoadNews implements _LoadNews {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
     TResult Function()? loadNews,
-    TResult Function()? loadTopNews,
-    TResult Function(List<ArticleEntity> articleList)? refresh,
+    TResult Function()? refresh,
+    TResult Function()? refreshTopNews,
     required TResult orElse(),
   }) {
     if (loadNews != null) {
@@ -271,10 +442,11 @@ class _$_LoadNews implements _LoadNews {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
     required TResult Function(_LoadNews value) loadNews,
-    required TResult Function(_LoadTopNews value) loadTopNews,
-    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
   }) {
     return loadNews(this);
   }
@@ -282,10 +454,11 @@ class _$_LoadNews implements _LoadNews {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
     TResult? Function(_LoadNews value)? loadNews,
-    TResult? Function(_LoadTopNews value)? loadTopNews,
-    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
   }) {
     return loadNews?.call(this);
   }
@@ -293,10 +466,11 @@ class _$_LoadNews implements _LoadNews {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
     TResult Function(_LoadNews value)? loadNews,
-    TResult Function(_LoadTopNews value)? loadTopNews,
-    TResult Function(_Refresh value)? refresh,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
     required TResult orElse(),
   }) {
     if (loadNews != null) {
@@ -311,35 +485,35 @@ abstract class _LoadNews implements NewsEvent {
 }
 
 /// @nodoc
-abstract class _$$_LoadTopNewsCopyWith<$Res> {
-  factory _$$_LoadTopNewsCopyWith(
-          _$_LoadTopNews value, $Res Function(_$_LoadTopNews) then) =
-      __$$_LoadTopNewsCopyWithImpl<$Res>;
+abstract class _$$_RefreshNewsCopyWith<$Res> {
+  factory _$$_RefreshNewsCopyWith(
+          _$_RefreshNews value, $Res Function(_$_RefreshNews) then) =
+      __$$_RefreshNewsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadTopNewsCopyWithImpl<$Res>
-    extends _$NewsEventCopyWithImpl<$Res, _$_LoadTopNews>
-    implements _$$_LoadTopNewsCopyWith<$Res> {
-  __$$_LoadTopNewsCopyWithImpl(
-      _$_LoadTopNews _value, $Res Function(_$_LoadTopNews) _then)
+class __$$_RefreshNewsCopyWithImpl<$Res>
+    extends _$NewsEventCopyWithImpl<$Res, _$_RefreshNews>
+    implements _$$_RefreshNewsCopyWith<$Res> {
+  __$$_RefreshNewsCopyWithImpl(
+      _$_RefreshNews _value, $Res Function(_$_RefreshNews) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadTopNews implements _LoadTopNews {
-  const _$_LoadTopNews();
+class _$_RefreshNews implements _RefreshNews {
+  const _$_RefreshNews();
 
   @override
   String toString() {
-    return 'NewsEvent.loadTopNews()';
+    return 'NewsEvent.refresh()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadTopNews);
+        (other.runtimeType == runtimeType && other is _$_RefreshNews);
   }
 
   @override
@@ -348,183 +522,39 @@ class _$_LoadTopNews implements _LoadTopNews {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
     required TResult Function() loadNews,
-    required TResult Function() loadTopNews,
-    required TResult Function(List<ArticleEntity> articleList) refresh,
+    required TResult Function() refresh,
+    required TResult Function() refreshTopNews,
   }) {
-    return loadTopNews();
+    return refresh();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? init,
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
     TResult? Function()? loadNews,
-    TResult? Function()? loadTopNews,
-    TResult? Function(List<ArticleEntity> articleList)? refresh,
+    TResult? Function()? refresh,
+    TResult? Function()? refreshTopNews,
   }) {
-    return loadTopNews?.call();
+    return refresh?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
     TResult Function()? loadNews,
-    TResult Function()? loadTopNews,
-    TResult Function(List<ArticleEntity> articleList)? refresh,
-    required TResult orElse(),
-  }) {
-    if (loadTopNews != null) {
-      return loadTopNews();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
-    required TResult Function(_LoadNews value) loadNews,
-    required TResult Function(_LoadTopNews value) loadTopNews,
-    required TResult Function(_Refresh value) refresh,
-  }) {
-    return loadTopNews(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
-    TResult? Function(_LoadNews value)? loadNews,
-    TResult? Function(_LoadTopNews value)? loadTopNews,
-    TResult? Function(_Refresh value)? refresh,
-  }) {
-    return loadTopNews?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
-    TResult Function(_LoadNews value)? loadNews,
-    TResult Function(_LoadTopNews value)? loadTopNews,
-    TResult Function(_Refresh value)? refresh,
-    required TResult orElse(),
-  }) {
-    if (loadTopNews != null) {
-      return loadTopNews(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _LoadTopNews implements NewsEvent {
-  const factory _LoadTopNews() = _$_LoadTopNews;
-}
-
-/// @nodoc
-abstract class _$$_RefreshCopyWith<$Res> {
-  factory _$$_RefreshCopyWith(
-          _$_Refresh value, $Res Function(_$_Refresh) then) =
-      __$$_RefreshCopyWithImpl<$Res>;
-  @useResult
-  $Res call({List<ArticleEntity> articleList});
-}
-
-/// @nodoc
-class __$$_RefreshCopyWithImpl<$Res>
-    extends _$NewsEventCopyWithImpl<$Res, _$_Refresh>
-    implements _$$_RefreshCopyWith<$Res> {
-  __$$_RefreshCopyWithImpl(_$_Refresh _value, $Res Function(_$_Refresh) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? articleList = null,
-  }) {
-    return _then(_$_Refresh(
-      articleList: null == articleList
-          ? _value._articleList
-          : articleList // ignore: cast_nullable_to_non_nullable
-              as List<ArticleEntity>,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_Refresh implements _Refresh {
-  const _$_Refresh({required final List<ArticleEntity> articleList})
-      : _articleList = articleList;
-
-  final List<ArticleEntity> _articleList;
-  @override
-  List<ArticleEntity> get articleList {
-    if (_articleList is EqualUnmodifiableListView) return _articleList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_articleList);
-  }
-
-  @override
-  String toString() {
-    return 'NewsEvent.refresh(articleList: $articleList)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Refresh &&
-            const DeepCollectionEquality()
-                .equals(other._articleList, _articleList));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_articleList));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_RefreshCopyWith<_$_Refresh> get copyWith =>
-      __$$_RefreshCopyWithImpl<_$_Refresh>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() init,
-    required TResult Function() loadNews,
-    required TResult Function() loadTopNews,
-    required TResult Function(List<ArticleEntity> articleList) refresh,
-  }) {
-    return refresh(articleList);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? init,
-    TResult? Function()? loadNews,
-    TResult? Function()? loadTopNews,
-    TResult? Function(List<ArticleEntity> articleList)? refresh,
-  }) {
-    return refresh?.call(articleList);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
-    TResult Function()? loadNews,
-    TResult Function()? loadTopNews,
-    TResult Function(List<ArticleEntity> articleList)? refresh,
+    TResult Function()? refresh,
+    TResult Function()? refreshTopNews,
     required TResult orElse(),
   }) {
     if (refresh != null) {
-      return refresh(articleList);
+      return refresh();
     }
     return orElse();
   }
@@ -532,10 +562,11 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
     required TResult Function(_LoadNews value) loadNews,
-    required TResult Function(_LoadTopNews value) loadTopNews,
-    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
   }) {
     return refresh(this);
   }
@@ -543,10 +574,11 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
     TResult? Function(_LoadNews value)? loadNews,
-    TResult? Function(_LoadTopNews value)? loadTopNews,
-    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
   }) {
     return refresh?.call(this);
   }
@@ -554,10 +586,11 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
     TResult Function(_LoadNews value)? loadNews,
-    TResult Function(_LoadTopNews value)? loadTopNews,
-    TResult Function(_Refresh value)? refresh,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -567,14 +600,128 @@ class _$_Refresh implements _Refresh {
   }
 }
 
-abstract class _Refresh implements NewsEvent {
-  const factory _Refresh({required final List<ArticleEntity> articleList}) =
-      _$_Refresh;
+abstract class _RefreshNews implements NewsEvent {
+  const factory _RefreshNews() = _$_RefreshNews;
+}
 
-  List<ArticleEntity> get articleList;
-  @JsonKey(ignore: true)
-  _$$_RefreshCopyWith<_$_Refresh> get copyWith =>
-      throw _privateConstructorUsedError;
+/// @nodoc
+abstract class _$$_RefreshTopNewsCopyWith<$Res> {
+  factory _$$_RefreshTopNewsCopyWith(
+          _$_RefreshTopNews value, $Res Function(_$_RefreshTopNews) then) =
+      __$$_RefreshTopNewsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_RefreshTopNewsCopyWithImpl<$Res>
+    extends _$NewsEventCopyWithImpl<$Res, _$_RefreshTopNews>
+    implements _$$_RefreshTopNewsCopyWith<$Res> {
+  __$$_RefreshTopNewsCopyWithImpl(
+      _$_RefreshTopNews _value, $Res Function(_$_RefreshTopNews) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_RefreshTopNews implements _RefreshTopNews {
+  const _$_RefreshTopNews();
+
+  @override
+  String toString() {
+    return 'NewsEvent.refreshTopNews()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_RefreshTopNews);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
+    required TResult Function() loadNews,
+    required TResult Function() refresh,
+    required TResult Function() refreshTopNews,
+  }) {
+    return refreshTopNews();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
+    TResult? Function()? loadNews,
+    TResult? Function()? refresh,
+    TResult? Function()? refreshTopNews,
+  }) {
+    return refreshTopNews?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
+    TResult Function()? loadNews,
+    TResult Function()? refresh,
+    TResult Function()? refreshTopNews,
+    required TResult orElse(),
+  }) {
+    if (refreshTopNews != null) {
+      return refreshTopNews();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
+    required TResult Function(_LoadNews value) loadNews,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
+  }) {
+    return refreshTopNews(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
+    TResult? Function(_LoadNews value)? loadNews,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
+  }) {
+    return refreshTopNews?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
+    TResult Function(_LoadNews value)? loadNews,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
+    required TResult orElse(),
+  }) {
+    if (refreshTopNews != null) {
+      return refreshTopNews(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RefreshTopNews implements NewsEvent {
+  const factory _RefreshTopNews() = _$_RefreshTopNews;
 }
 
 /// @nodoc
@@ -582,21 +729,21 @@ mixin _$NewsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(NewsViewModel viewModel) loading,
+    required TResult Function() loading,
     required TResult Function(NewsViewModel viewModel) loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(NewsViewModel viewModel)? loading,
+    TResult? Function()? loading,
     TResult? Function(NewsViewModel viewModel)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(NewsViewModel viewModel)? loading,
+    TResult Function()? loading,
     TResult Function(NewsViewModel viewModel)? loaded,
     required TResult orElse(),
   }) =>
@@ -680,7 +827,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(NewsViewModel viewModel) loading,
+    required TResult Function() loading,
     required TResult Function(NewsViewModel viewModel) loaded,
   }) {
     return initial();
@@ -690,7 +837,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(NewsViewModel viewModel)? loading,
+    TResult? Function()? loading,
     TResult? Function(NewsViewModel viewModel)? loaded,
   }) {
     return initial?.call();
@@ -700,7 +847,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(NewsViewModel viewModel)? loading,
+    TResult Function()? loading,
     TResult Function(NewsViewModel viewModel)? loaded,
     required TResult orElse(),
   }) {
@@ -754,10 +901,6 @@ abstract class _$$_LoadingCopyWith<$Res> {
   factory _$$_LoadingCopyWith(
           _$_Loading value, $Res Function(_$_Loading) then) =
       __$$_LoadingCopyWithImpl<$Res>;
-  @useResult
-  $Res call({NewsViewModel viewModel});
-
-  $NewsViewModelCopyWith<$Res> get viewModel;
 }
 
 /// @nodoc
@@ -766,90 +909,57 @@ class __$$_LoadingCopyWithImpl<$Res>
     implements _$$_LoadingCopyWith<$Res> {
   __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? viewModel = null,
-  }) {
-    return _then(_$_Loading(
-      viewModel: null == viewModel
-          ? _value.viewModel
-          : viewModel // ignore: cast_nullable_to_non_nullable
-              as NewsViewModel,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $NewsViewModelCopyWith<$Res> get viewModel {
-    return $NewsViewModelCopyWith<$Res>(_value.viewModel, (value) {
-      return _then(_value.copyWith(viewModel: value));
-    });
-  }
 }
 
 /// @nodoc
 
 class _$_Loading implements _Loading {
-  const _$_Loading({required this.viewModel});
-
-  @override
-  final NewsViewModel viewModel;
+  const _$_Loading();
 
   @override
   String toString() {
-    return 'NewsState.loading(viewModel: $viewModel)';
+    return 'NewsState.loading()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Loading &&
-            (identical(other.viewModel, viewModel) ||
-                other.viewModel == viewModel));
+        (other.runtimeType == runtimeType && other is _$_Loading);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, viewModel);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_LoadingCopyWith<_$_Loading> get copyWith =>
-      __$$_LoadingCopyWithImpl<_$_Loading>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(NewsViewModel viewModel) loading,
+    required TResult Function() loading,
     required TResult Function(NewsViewModel viewModel) loaded,
   }) {
-    return loading(viewModel);
+    return loading();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(NewsViewModel viewModel)? loading,
+    TResult? Function()? loading,
     TResult? Function(NewsViewModel viewModel)? loaded,
   }) {
-    return loading?.call(viewModel);
+    return loading?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(NewsViewModel viewModel)? loading,
+    TResult Function()? loading,
     TResult Function(NewsViewModel viewModel)? loaded,
     required TResult orElse(),
   }) {
     if (loading != null) {
-      return loading(viewModel);
+      return loading();
     }
     return orElse();
   }
@@ -890,12 +1000,7 @@ class _$_Loading implements _Loading {
 }
 
 abstract class _Loading implements NewsState {
-  const factory _Loading({required final NewsViewModel viewModel}) = _$_Loading;
-
-  NewsViewModel get viewModel;
-  @JsonKey(ignore: true)
-  _$$_LoadingCopyWith<_$_Loading> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _Loading() = _$_Loading;
 }
 
 /// @nodoc
@@ -972,7 +1077,7 @@ class _$_Loaded implements _Loaded {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(NewsViewModel viewModel) loading,
+    required TResult Function() loading,
     required TResult Function(NewsViewModel viewModel) loaded,
   }) {
     return loaded(viewModel);
@@ -982,7 +1087,7 @@ class _$_Loaded implements _Loaded {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(NewsViewModel viewModel)? loading,
+    TResult? Function()? loading,
     TResult? Function(NewsViewModel viewModel)? loaded,
   }) {
     return loaded?.call(viewModel);
@@ -992,7 +1097,7 @@ class _$_Loaded implements _Loaded {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(NewsViewModel viewModel)? loading,
+    TResult Function()? loading,
     TResult Function(NewsViewModel viewModel)? loaded,
     required TResult orElse(),
   }) {
@@ -1048,6 +1153,7 @@ abstract class _Loaded implements NewsState {
 
 /// @nodoc
 mixin _$NewsViewModel {
+  ScrollController? get scrollController => throw _privateConstructorUsedError;
   bool get isInitNews => throw _privateConstructorUsedError;
   int get newsPage => throw _privateConstructorUsedError;
   List<ArticleEntity> get articleList => throw _privateConstructorUsedError;
@@ -1065,7 +1171,8 @@ abstract class $NewsViewModelCopyWith<$Res> {
       _$NewsViewModelCopyWithImpl<$Res, NewsViewModel>;
   @useResult
   $Res call(
-      {bool isInitNews,
+      {ScrollController? scrollController,
+      bool isInitNews,
       int newsPage,
       List<ArticleEntity> articleList,
       List<ArticleEntity> topArticleList});
@@ -1084,12 +1191,17 @@ class _$NewsViewModelCopyWithImpl<$Res, $Val extends NewsViewModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? scrollController = freezed,
     Object? isInitNews = null,
     Object? newsPage = null,
     Object? articleList = null,
     Object? topArticleList = null,
   }) {
     return _then(_value.copyWith(
+      scrollController: freezed == scrollController
+          ? _value.scrollController
+          : scrollController // ignore: cast_nullable_to_non_nullable
+              as ScrollController?,
       isInitNews: null == isInitNews
           ? _value.isInitNews
           : isInitNews // ignore: cast_nullable_to_non_nullable
@@ -1119,7 +1231,8 @@ abstract class _$$_NewsViewModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool isInitNews,
+      {ScrollController? scrollController,
+      bool isInitNews,
       int newsPage,
       List<ArticleEntity> articleList,
       List<ArticleEntity> topArticleList});
@@ -1136,12 +1249,17 @@ class __$$_NewsViewModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? scrollController = freezed,
     Object? isInitNews = null,
     Object? newsPage = null,
     Object? articleList = null,
     Object? topArticleList = null,
   }) {
     return _then(_$_NewsViewModel(
+      scrollController: freezed == scrollController
+          ? _value.scrollController
+          : scrollController // ignore: cast_nullable_to_non_nullable
+              as ScrollController?,
       isInitNews: null == isInitNews
           ? _value.isInitNews
           : isInitNews // ignore: cast_nullable_to_non_nullable
@@ -1166,13 +1284,16 @@ class __$$_NewsViewModelCopyWithImpl<$Res>
 
 class _$_NewsViewModel implements _NewsViewModel {
   const _$_NewsViewModel(
-      {this.isInitNews = false,
+      {this.scrollController,
+      this.isInitNews = false,
       this.newsPage = 1,
       final List<ArticleEntity> articleList = const [],
       final List<ArticleEntity> topArticleList = const []})
       : _articleList = articleList,
         _topArticleList = topArticleList;
 
+  @override
+  final ScrollController? scrollController;
   @override
   @JsonKey()
   final bool isInitNews;
@@ -1199,7 +1320,7 @@ class _$_NewsViewModel implements _NewsViewModel {
 
   @override
   String toString() {
-    return 'NewsViewModel(isInitNews: $isInitNews, newsPage: $newsPage, articleList: $articleList, topArticleList: $topArticleList)';
+    return 'NewsViewModel(scrollController: $scrollController, isInitNews: $isInitNews, newsPage: $newsPage, articleList: $articleList, topArticleList: $topArticleList)';
   }
 
   @override
@@ -1207,6 +1328,8 @@ class _$_NewsViewModel implements _NewsViewModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_NewsViewModel &&
+            (identical(other.scrollController, scrollController) ||
+                other.scrollController == scrollController) &&
             (identical(other.isInitNews, isInitNews) ||
                 other.isInitNews == isInitNews) &&
             (identical(other.newsPage, newsPage) ||
@@ -1220,6 +1343,7 @@ class _$_NewsViewModel implements _NewsViewModel {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      scrollController,
       isInitNews,
       newsPage,
       const DeepCollectionEquality().hash(_articleList),
@@ -1234,11 +1358,14 @@ class _$_NewsViewModel implements _NewsViewModel {
 
 abstract class _NewsViewModel implements NewsViewModel {
   const factory _NewsViewModel(
-      {final bool isInitNews,
+      {final ScrollController? scrollController,
+      final bool isInitNews,
       final int newsPage,
       final List<ArticleEntity> articleList,
       final List<ArticleEntity> topArticleList}) = _$_NewsViewModel;
 
+  @override
+  ScrollController? get scrollController;
   @override
   bool get isInitNews;
   @override

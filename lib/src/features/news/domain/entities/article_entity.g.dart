@@ -8,7 +8,7 @@ part of 'article_entity.dart';
 
 _$_Article _$$_ArticleFromJson(Map<String, dynamic> json) => _$_Article(
       author: json['author'] as String?,
-      title: json['title'] as String,
+      title: json['title'] as String?,
       description: json['description'] as String?,
       url: json['url'] as String?,
       urlToImage: json['urlToImage'] as String?,

@@ -2,9 +2,9 @@ part of 'news_bloc.dart';
 
 @freezed
 class NewsEvent with _$NewsEvent {
-  const factory NewsEvent.init() = _Init;
+  const factory NewsEvent.init(ScrollController? scrollController) = _InitNews;
+  const factory NewsEvent.loadingNews() = _LoadingNews;
   const factory NewsEvent.loadNews() = _LoadNews;
-  const factory NewsEvent.loadTopNews() = _LoadTopNews;
-  const factory NewsEvent.refresh({required List<ArticleEntity> articleList}) =
-      _Refresh;
+  const factory NewsEvent.refresh() = _RefreshNews;
+  const factory NewsEvent.refreshTopNews() = _RefreshTopNews;
 }
