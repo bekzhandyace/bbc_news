@@ -6,16 +6,19 @@ part 'article_entity.g.dart';
 @freezed
 class ArticleEntity with _$ArticleEntity {
   factory ArticleEntity({
-    required String? author,
-    required String? title,
-    required String? description,
-    required String? url,
-    required String? urlToImage,
-    required String? publishAt,
-    required String? content,
+     String? author,
+     String? title,
+     String? description,
+     String? url,
+     String? urlToImage,
+     String? publishAt,
+     String? content,
     @Default(false) bool isFavorite,
   }) = _Article;
 
   factory ArticleEntity.fromJson(Map<String, dynamic> json) =>
       _$ArticleEntityFromJson(json);
+
+  
+
 }

@@ -1,13 +1,16 @@
 import 'package:bbc_news/src/core/base/base_bloc/context/bloc/context_activity_bloc.dart';
 import 'package:bbc_news/src/core/service/injectable/injectable_service.dart';
+import 'package:bbc_news/src/features/favorites/presentation/bloc/favorite_page_bloc.dart';
+
+import 'package:bbc_news/src/features/main_page/presentation/page/main_page.dart';
+import 'package:bbc_news/src/features/news/presentation/bloc/news_bloc.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'src/features/news/presentation/page/news_page.dart';
-
 void main() async {
-  configureDependencies();
+  await configureDependencies();
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(
@@ -33,7 +36,17 @@ class NewsApp extends StatelessWidget {
           colorScheme: colorScheme,
           brightness: Brightness.dark,
         ),
-        home: NewsPage(),
+        home: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => getIt<NewsBloc>(),
+            ),
+            BlocProvider(
+              create: (context) => getIt<FavoritePageBloc>(),
+            ),
+          ],
+          child: const MainPage(),
+        ),
       ),
     );
   }

@@ -16,36 +16,41 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ContextActivityEvent {
-  ContexActivityVoidCallback get callback => throw _privateConstructorUsedError;
+  ContextActivityVoidCallback get callback =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(ContexActivityVoidCallback callback) started,
+    required TResult Function(ContextActivityVoidCallback callback)
+        handleContextActivity,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(ContexActivityVoidCallback callback)? started,
+    TResult? Function(ContextActivityVoidCallback callback)?
+        handleContextActivity,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(ContexActivityVoidCallback callback)? started,
+    TResult Function(ContextActivityVoidCallback callback)?
+        handleContextActivity,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(HandleContextActivityEvent value) started,
+    required TResult Function(HandleContextActivityEvent value)
+        handleContextActivity,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HandleContextActivityEvent value)? started,
+    TResult? Function(HandleContextActivityEvent value)? handleContextActivity,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(HandleContextActivityEvent value)? started,
+    TResult Function(HandleContextActivityEvent value)? handleContextActivity,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -61,7 +66,7 @@ abstract class $ContextActivityEventCopyWith<$Res> {
           $Res Function(ContextActivityEvent) then) =
       _$ContextActivityEventCopyWithImpl<$Res, ContextActivityEvent>;
   @useResult
-  $Res call({ContexActivityVoidCallback callback});
+  $Res call({ContextActivityVoidCallback callback});
 }
 
 /// @nodoc
@@ -84,7 +89,7 @@ class _$ContextActivityEventCopyWithImpl<$Res,
       callback: null == callback
           ? _value.callback
           : callback // ignore: cast_nullable_to_non_nullable
-              as ContexActivityVoidCallback,
+              as ContextActivityVoidCallback,
     ) as $Val);
   }
 }
@@ -98,7 +103,7 @@ abstract class _$$HandleContextActivityEventCopyWith<$Res>
       __$$HandleContextActivityEventCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ContexActivityVoidCallback callback});
+  $Res call({ContextActivityVoidCallback callback});
 }
 
 /// @nodoc
@@ -120,7 +125,7 @@ class __$$HandleContextActivityEventCopyWithImpl<$Res>
       null == callback
           ? _value.callback
           : callback // ignore: cast_nullable_to_non_nullable
-              as ContexActivityVoidCallback,
+              as ContextActivityVoidCallback,
     ));
   }
 }
@@ -131,11 +136,11 @@ class _$HandleContextActivityEvent extends HandleContextActivityEvent {
   const _$HandleContextActivityEvent(this.callback) : super._();
 
   @override
-  final ContexActivityVoidCallback callback;
+  final ContextActivityVoidCallback callback;
 
   @override
   String toString() {
-    return 'ContextActivityEvent.started(callback: $callback)';
+    return 'ContextActivityEvent.handleContextActivity(callback: $callback)';
   }
 
   @override
@@ -160,27 +165,30 @@ class _$HandleContextActivityEvent extends HandleContextActivityEvent {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(ContexActivityVoidCallback callback) started,
+    required TResult Function(ContextActivityVoidCallback callback)
+        handleContextActivity,
   }) {
-    return started(callback);
+    return handleContextActivity(callback);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(ContexActivityVoidCallback callback)? started,
+    TResult? Function(ContextActivityVoidCallback callback)?
+        handleContextActivity,
   }) {
-    return started?.call(callback);
+    return handleContextActivity?.call(callback);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(ContexActivityVoidCallback callback)? started,
+    TResult Function(ContextActivityVoidCallback callback)?
+        handleContextActivity,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(callback);
+    if (handleContextActivity != null) {
+      return handleContextActivity(callback);
     }
     return orElse();
   }
@@ -188,27 +196,28 @@ class _$HandleContextActivityEvent extends HandleContextActivityEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(HandleContextActivityEvent value) started,
+    required TResult Function(HandleContextActivityEvent value)
+        handleContextActivity,
   }) {
-    return started(this);
+    return handleContextActivity(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HandleContextActivityEvent value)? started,
+    TResult? Function(HandleContextActivityEvent value)? handleContextActivity,
   }) {
-    return started?.call(this);
+    return handleContextActivity?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(HandleContextActivityEvent value)? started,
+    TResult Function(HandleContextActivityEvent value)? handleContextActivity,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (handleContextActivity != null) {
+      return handleContextActivity(this);
     }
     return orElse();
   }
@@ -216,11 +225,12 @@ class _$HandleContextActivityEvent extends HandleContextActivityEvent {
 
 abstract class HandleContextActivityEvent extends ContextActivityEvent {
   const factory HandleContextActivityEvent(
-      final ContexActivityVoidCallback callback) = _$HandleContextActivityEvent;
+          final ContextActivityVoidCallback callback) =
+      _$HandleContextActivityEvent;
   const HandleContextActivityEvent._() : super._();
 
   @override
-  ContexActivityVoidCallback get callback;
+  ContextActivityVoidCallback get callback;
   @override
   @JsonKey(ignore: true)
   _$$HandleContextActivityEventCopyWith<_$HandleContextActivityEvent>
@@ -229,24 +239,24 @@ abstract class HandleContextActivityEvent extends ContextActivityEvent {
 
 /// @nodoc
 mixin _$ContextActivityState {
-  ContexActivityVoidCallback? get contextActivityHandler =>
+  ContextActivityVoidCallback? get contextActivityHandler =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            ContexActivityVoidCallback? contextActivityHandler)
+            ContextActivityVoidCallback? contextActivityHandler)
         handleActionWithContext,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(ContexActivityVoidCallback? contextActivityHandler)?
+    TResult? Function(ContextActivityVoidCallback? contextActivityHandler)?
         handleActionWithContext,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(ContexActivityVoidCallback? contextActivityHandler)?
+    TResult Function(ContextActivityVoidCallback? contextActivityHandler)?
         handleActionWithContext,
     required TResult orElse(),
   }) =>
@@ -280,7 +290,7 @@ abstract class $ContextActivityStateCopyWith<$Res> {
           $Res Function(ContextActivityState) then) =
       _$ContextActivityStateCopyWithImpl<$Res, ContextActivityState>;
   @useResult
-  $Res call({ContexActivityVoidCallback? contextActivityHandler});
+  $Res call({ContextActivityVoidCallback? contextActivityHandler});
 }
 
 /// @nodoc
@@ -303,7 +313,7 @@ class _$ContextActivityStateCopyWithImpl<$Res,
       contextActivityHandler: freezed == contextActivityHandler
           ? _value.contextActivityHandler
           : contextActivityHandler // ignore: cast_nullable_to_non_nullable
-              as ContexActivityVoidCallback?,
+              as ContextActivityVoidCallback?,
     ) as $Val);
   }
 }
@@ -316,7 +326,7 @@ abstract class _$$HandleActionWithContextCopyWith<$Res>
       __$$HandleActionWithContextCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ContexActivityVoidCallback? contextActivityHandler});
+  $Res call({ContextActivityVoidCallback? contextActivityHandler});
 }
 
 /// @nodoc
@@ -336,7 +346,7 @@ class __$$HandleActionWithContextCopyWithImpl<$Res>
       freezed == contextActivityHandler
           ? _value.contextActivityHandler
           : contextActivityHandler // ignore: cast_nullable_to_non_nullable
-              as ContexActivityVoidCallback?,
+              as ContextActivityVoidCallback?,
     ));
   }
 }
@@ -347,7 +357,7 @@ class _$HandleActionWithContext extends HandleActionWithContext {
   const _$HandleActionWithContext(this.contextActivityHandler) : super._();
 
   @override
-  final ContexActivityVoidCallback? contextActivityHandler;
+  final ContextActivityVoidCallback? contextActivityHandler;
 
   @override
   String toString() {
@@ -377,7 +387,7 @@ class _$HandleActionWithContext extends HandleActionWithContext {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            ContexActivityVoidCallback? contextActivityHandler)
+            ContextActivityVoidCallback? contextActivityHandler)
         handleActionWithContext,
   }) {
     return handleActionWithContext(contextActivityHandler);
@@ -386,7 +396,7 @@ class _$HandleActionWithContext extends HandleActionWithContext {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(ContexActivityVoidCallback? contextActivityHandler)?
+    TResult? Function(ContextActivityVoidCallback? contextActivityHandler)?
         handleActionWithContext,
   }) {
     return handleActionWithContext?.call(contextActivityHandler);
@@ -395,7 +405,7 @@ class _$HandleActionWithContext extends HandleActionWithContext {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(ContexActivityVoidCallback? contextActivityHandler)?
+    TResult Function(ContextActivityVoidCallback? contextActivityHandler)?
         handleActionWithContext,
     required TResult orElse(),
   }) {
@@ -437,12 +447,12 @@ class _$HandleActionWithContext extends HandleActionWithContext {
 
 abstract class HandleActionWithContext extends ContextActivityState {
   const factory HandleActionWithContext(
-          final ContexActivityVoidCallback? contextActivityHandler) =
+          final ContextActivityVoidCallback? contextActivityHandler) =
       _$HandleActionWithContext;
   const HandleActionWithContext._() : super._();
 
   @override
-  ContexActivityVoidCallback? get contextActivityHandler;
+  ContextActivityVoidCallback? get contextActivityHandler;
   @override
   @JsonKey(ignore: true)
   _$$HandleActionWithContextCopyWith<_$HandleActionWithContext> get copyWith =>

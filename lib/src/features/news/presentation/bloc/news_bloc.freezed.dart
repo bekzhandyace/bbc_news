@@ -20,27 +20,42 @@ mixin _$NewsEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(ScrollController? scrollController) init,
     required TResult Function() loadingNews,
-    required TResult Function() loadNews,
+    required TResult Function() loadedNews,
     required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
     required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(ScrollController? scrollController)? init,
     TResult? Function()? loadingNews,
-    TResult? Function()? loadNews,
+    TResult? Function()? loadedNews,
     TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
     TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ScrollController? scrollController)? init,
     TResult Function()? loadingNews,
-    TResult Function()? loadNews,
+    TResult Function()? loadedNews,
     TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
     TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,27 +63,46 @@ mixin _$NewsEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_InitNews value) init,
     required TResult Function(_LoadingNews value) loadingNews,
-    required TResult Function(_LoadNews value) loadNews,
+    required TResult Function(_LoadNews value) loadedNews,
     required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
     required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitNews value)? init,
     TResult? Function(_LoadingNews value)? loadingNews,
-    TResult? Function(_LoadNews value)? loadNews,
+    TResult? Function(_LoadNews value)? loadedNews,
     TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
     TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitNews value)? init,
     TResult Function(_LoadingNews value)? loadingNews,
-    TResult Function(_LoadNews value)? loadNews,
+    TResult Function(_LoadNews value)? loadedNews,
     TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
     TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -158,9 +192,14 @@ class _$_InitNews implements _InitNews {
   TResult when<TResult extends Object?>({
     required TResult Function(ScrollController? scrollController) init,
     required TResult Function() loadingNews,
-    required TResult Function() loadNews,
+    required TResult Function() loadedNews,
     required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
     required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
   }) {
     return init(scrollController);
   }
@@ -170,9 +209,14 @@ class _$_InitNews implements _InitNews {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(ScrollController? scrollController)? init,
     TResult? Function()? loadingNews,
-    TResult? Function()? loadNews,
+    TResult? Function()? loadedNews,
     TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
     TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
   }) {
     return init?.call(scrollController);
   }
@@ -182,9 +226,14 @@ class _$_InitNews implements _InitNews {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ScrollController? scrollController)? init,
     TResult Function()? loadingNews,
-    TResult Function()? loadNews,
+    TResult Function()? loadedNews,
     TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
     TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -198,9 +247,16 @@ class _$_InitNews implements _InitNews {
   TResult map<TResult extends Object?>({
     required TResult Function(_InitNews value) init,
     required TResult Function(_LoadingNews value) loadingNews,
-    required TResult Function(_LoadNews value) loadNews,
+    required TResult Function(_LoadNews value) loadedNews,
     required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
     required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
   }) {
     return init(this);
   }
@@ -210,9 +266,15 @@ class _$_InitNews implements _InitNews {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitNews value)? init,
     TResult? Function(_LoadingNews value)? loadingNews,
-    TResult? Function(_LoadNews value)? loadNews,
+    TResult? Function(_LoadNews value)? loadedNews,
     TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
     TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
   }) {
     return init?.call(this);
   }
@@ -222,9 +284,15 @@ class _$_InitNews implements _InitNews {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitNews value)? init,
     TResult Function(_LoadingNews value)? loadingNews,
-    TResult Function(_LoadNews value)? loadNews,
+    TResult Function(_LoadNews value)? loadedNews,
     TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
     TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -284,9 +352,14 @@ class _$_LoadingNews implements _LoadingNews {
   TResult when<TResult extends Object?>({
     required TResult Function(ScrollController? scrollController) init,
     required TResult Function() loadingNews,
-    required TResult Function() loadNews,
+    required TResult Function() loadedNews,
     required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
     required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
   }) {
     return loadingNews();
   }
@@ -296,9 +369,14 @@ class _$_LoadingNews implements _LoadingNews {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(ScrollController? scrollController)? init,
     TResult? Function()? loadingNews,
-    TResult? Function()? loadNews,
+    TResult? Function()? loadedNews,
     TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
     TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
   }) {
     return loadingNews?.call();
   }
@@ -308,9 +386,14 @@ class _$_LoadingNews implements _LoadingNews {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ScrollController? scrollController)? init,
     TResult Function()? loadingNews,
-    TResult Function()? loadNews,
+    TResult Function()? loadedNews,
     TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
     TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
     required TResult orElse(),
   }) {
     if (loadingNews != null) {
@@ -324,9 +407,16 @@ class _$_LoadingNews implements _LoadingNews {
   TResult map<TResult extends Object?>({
     required TResult Function(_InitNews value) init,
     required TResult Function(_LoadingNews value) loadingNews,
-    required TResult Function(_LoadNews value) loadNews,
+    required TResult Function(_LoadNews value) loadedNews,
     required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
     required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
   }) {
     return loadingNews(this);
   }
@@ -336,9 +426,15 @@ class _$_LoadingNews implements _LoadingNews {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitNews value)? init,
     TResult? Function(_LoadingNews value)? loadingNews,
-    TResult? Function(_LoadNews value)? loadNews,
+    TResult? Function(_LoadNews value)? loadedNews,
     TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
     TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
   }) {
     return loadingNews?.call(this);
   }
@@ -348,9 +444,15 @@ class _$_LoadingNews implements _LoadingNews {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitNews value)? init,
     TResult Function(_LoadingNews value)? loadingNews,
-    TResult Function(_LoadNews value)? loadNews,
+    TResult Function(_LoadNews value)? loadedNews,
     TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
     TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
     required TResult orElse(),
   }) {
     if (loadingNews != null) {
@@ -387,7 +489,7 @@ class _$_LoadNews implements _LoadNews {
 
   @override
   String toString() {
-    return 'NewsEvent.loadNews()';
+    return 'NewsEvent.loadedNews()';
   }
 
   @override
@@ -404,11 +506,16 @@ class _$_LoadNews implements _LoadNews {
   TResult when<TResult extends Object?>({
     required TResult Function(ScrollController? scrollController) init,
     required TResult Function() loadingNews,
-    required TResult Function() loadNews,
+    required TResult Function() loadedNews,
     required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
     required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
   }) {
-    return loadNews();
+    return loadedNews();
   }
 
   @override
@@ -416,11 +523,16 @@ class _$_LoadNews implements _LoadNews {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(ScrollController? scrollController)? init,
     TResult? Function()? loadingNews,
-    TResult? Function()? loadNews,
+    TResult? Function()? loadedNews,
     TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
     TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
   }) {
-    return loadNews?.call();
+    return loadedNews?.call();
   }
 
   @override
@@ -428,13 +540,18 @@ class _$_LoadNews implements _LoadNews {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ScrollController? scrollController)? init,
     TResult Function()? loadingNews,
-    TResult Function()? loadNews,
+    TResult Function()? loadedNews,
     TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
     TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
     required TResult orElse(),
   }) {
-    if (loadNews != null) {
-      return loadNews();
+    if (loadedNews != null) {
+      return loadedNews();
     }
     return orElse();
   }
@@ -444,11 +561,18 @@ class _$_LoadNews implements _LoadNews {
   TResult map<TResult extends Object?>({
     required TResult Function(_InitNews value) init,
     required TResult Function(_LoadingNews value) loadingNews,
-    required TResult Function(_LoadNews value) loadNews,
+    required TResult Function(_LoadNews value) loadedNews,
     required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
     required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
   }) {
-    return loadNews(this);
+    return loadedNews(this);
   }
 
   @override
@@ -456,11 +580,17 @@ class _$_LoadNews implements _LoadNews {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitNews value)? init,
     TResult? Function(_LoadingNews value)? loadingNews,
-    TResult? Function(_LoadNews value)? loadNews,
+    TResult? Function(_LoadNews value)? loadedNews,
     TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
     TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
   }) {
-    return loadNews?.call(this);
+    return loadedNews?.call(this);
   }
 
   @override
@@ -468,13 +598,19 @@ class _$_LoadNews implements _LoadNews {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitNews value)? init,
     TResult Function(_LoadingNews value)? loadingNews,
-    TResult Function(_LoadNews value)? loadNews,
+    TResult Function(_LoadNews value)? loadedNews,
     TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
     TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
     required TResult orElse(),
   }) {
-    if (loadNews != null) {
-      return loadNews(this);
+    if (loadedNews != null) {
+      return loadedNews(this);
     }
     return orElse();
   }
@@ -524,9 +660,14 @@ class _$_RefreshNews implements _RefreshNews {
   TResult when<TResult extends Object?>({
     required TResult Function(ScrollController? scrollController) init,
     required TResult Function() loadingNews,
-    required TResult Function() loadNews,
+    required TResult Function() loadedNews,
     required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
     required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
   }) {
     return refresh();
   }
@@ -536,9 +677,14 @@ class _$_RefreshNews implements _RefreshNews {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(ScrollController? scrollController)? init,
     TResult? Function()? loadingNews,
-    TResult? Function()? loadNews,
+    TResult? Function()? loadedNews,
     TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
     TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
   }) {
     return refresh?.call();
   }
@@ -548,9 +694,14 @@ class _$_RefreshNews implements _RefreshNews {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ScrollController? scrollController)? init,
     TResult Function()? loadingNews,
-    TResult Function()? loadNews,
+    TResult Function()? loadedNews,
     TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
     TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -564,9 +715,16 @@ class _$_RefreshNews implements _RefreshNews {
   TResult map<TResult extends Object?>({
     required TResult Function(_InitNews value) init,
     required TResult Function(_LoadingNews value) loadingNews,
-    required TResult Function(_LoadNews value) loadNews,
+    required TResult Function(_LoadNews value) loadedNews,
     required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
     required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
   }) {
     return refresh(this);
   }
@@ -576,9 +734,15 @@ class _$_RefreshNews implements _RefreshNews {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitNews value)? init,
     TResult? Function(_LoadingNews value)? loadingNews,
-    TResult? Function(_LoadNews value)? loadNews,
+    TResult? Function(_LoadNews value)? loadedNews,
     TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
     TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
   }) {
     return refresh?.call(this);
   }
@@ -588,9 +752,15 @@ class _$_RefreshNews implements _RefreshNews {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitNews value)? init,
     TResult Function(_LoadingNews value)? loadingNews,
-    TResult Function(_LoadNews value)? loadNews,
+    TResult Function(_LoadNews value)? loadedNews,
     TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
     TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -602,6 +772,395 @@ class _$_RefreshNews implements _RefreshNews {
 
 abstract class _RefreshNews implements NewsEvent {
   const factory _RefreshNews() = _$_RefreshNews;
+}
+
+/// @nodoc
+abstract class _$$_GetFavoriteNewsCopyWith<$Res> {
+  factory _$$_GetFavoriteNewsCopyWith(
+          _$_GetFavoriteNews value, $Res Function(_$_GetFavoriteNews) then) =
+      __$$_GetFavoriteNewsCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ArticleEntity> articles});
+}
+
+/// @nodoc
+class __$$_GetFavoriteNewsCopyWithImpl<$Res>
+    extends _$NewsEventCopyWithImpl<$Res, _$_GetFavoriteNews>
+    implements _$$_GetFavoriteNewsCopyWith<$Res> {
+  __$$_GetFavoriteNewsCopyWithImpl(
+      _$_GetFavoriteNews _value, $Res Function(_$_GetFavoriteNews) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? articles = null,
+  }) {
+    return _then(_$_GetFavoriteNews(
+      null == articles
+          ? _value._articles
+          : articles // ignore: cast_nullable_to_non_nullable
+              as List<ArticleEntity>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetFavoriteNews implements _GetFavoriteNews {
+  const _$_GetFavoriteNews(final List<ArticleEntity> articles)
+      : _articles = articles;
+
+  final List<ArticleEntity> _articles;
+  @override
+  List<ArticleEntity> get articles {
+    if (_articles is EqualUnmodifiableListView) return _articles;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_articles);
+  }
+
+  @override
+  String toString() {
+    return 'NewsEvent.getFavorite(articles: $articles)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetFavoriteNews &&
+            const DeepCollectionEquality().equals(other._articles, _articles));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_articles));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_GetFavoriteNewsCopyWith<_$_GetFavoriteNews> get copyWith =>
+      __$$_GetFavoriteNewsCopyWithImpl<_$_GetFavoriteNews>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
+    required TResult Function() loadedNews,
+    required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
+    required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
+  }) {
+    return getFavorite(articles);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
+    TResult? Function()? loadedNews,
+    TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
+    TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
+  }) {
+    return getFavorite?.call(articles);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
+    TResult Function()? loadedNews,
+    TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
+    TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (getFavorite != null) {
+      return getFavorite(articles);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
+    required TResult Function(_LoadNews value) loadedNews,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
+  }) {
+    return getFavorite(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
+    TResult? Function(_LoadNews value)? loadedNews,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
+  }) {
+    return getFavorite?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
+    TResult Function(_LoadNews value)? loadedNews,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (getFavorite != null) {
+      return getFavorite(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetFavoriteNews implements NewsEvent {
+  const factory _GetFavoriteNews(final List<ArticleEntity> articles) =
+      _$_GetFavoriteNews;
+
+  List<ArticleEntity> get articles;
+  @JsonKey(ignore: true)
+  _$$_GetFavoriteNewsCopyWith<_$_GetFavoriteNews> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_SetFavoriteNewsCopyWith<$Res> {
+  factory _$$_SetFavoriteNewsCopyWith(
+          _$_SetFavoriteNews value, $Res Function(_$_SetFavoriteNews) then) =
+      __$$_SetFavoriteNewsCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ArticleEntity article});
+
+  $ArticleEntityCopyWith<$Res> get article;
+}
+
+/// @nodoc
+class __$$_SetFavoriteNewsCopyWithImpl<$Res>
+    extends _$NewsEventCopyWithImpl<$Res, _$_SetFavoriteNews>
+    implements _$$_SetFavoriteNewsCopyWith<$Res> {
+  __$$_SetFavoriteNewsCopyWithImpl(
+      _$_SetFavoriteNews _value, $Res Function(_$_SetFavoriteNews) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? article = null,
+  }) {
+    return _then(_$_SetFavoriteNews(
+      null == article
+          ? _value.article
+          : article // ignore: cast_nullable_to_non_nullable
+              as ArticleEntity,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ArticleEntityCopyWith<$Res> get article {
+    return $ArticleEntityCopyWith<$Res>(_value.article, (value) {
+      return _then(_value.copyWith(article: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$_SetFavoriteNews implements _SetFavoriteNews {
+  const _$_SetFavoriteNews(this.article);
+
+  @override
+  final ArticleEntity article;
+
+  @override
+  String toString() {
+    return 'NewsEvent.setFavorite(article: $article)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SetFavoriteNews &&
+            (identical(other.article, article) || other.article == article));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, article);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SetFavoriteNewsCopyWith<_$_SetFavoriteNews> get copyWith =>
+      __$$_SetFavoriteNewsCopyWithImpl<_$_SetFavoriteNews>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
+    required TResult Function() loadedNews,
+    required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
+    required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
+  }) {
+    return setFavorite(article);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
+    TResult? Function()? loadedNews,
+    TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
+    TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
+  }) {
+    return setFavorite?.call(article);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
+    TResult Function()? loadedNews,
+    TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
+    TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (setFavorite != null) {
+      return setFavorite(article);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
+    required TResult Function(_LoadNews value) loadedNews,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
+  }) {
+    return setFavorite(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
+    TResult? Function(_LoadNews value)? loadedNews,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
+  }) {
+    return setFavorite?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
+    TResult Function(_LoadNews value)? loadedNews,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (setFavorite != null) {
+      return setFavorite(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SetFavoriteNews implements NewsEvent {
+  const factory _SetFavoriteNews(final ArticleEntity article) =
+      _$_SetFavoriteNews;
+
+  ArticleEntity get article;
+  @JsonKey(ignore: true)
+  _$$_SetFavoriteNewsCopyWith<_$_SetFavoriteNews> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -644,9 +1203,14 @@ class _$_RefreshTopNews implements _RefreshTopNews {
   TResult when<TResult extends Object?>({
     required TResult Function(ScrollController? scrollController) init,
     required TResult Function() loadingNews,
-    required TResult Function() loadNews,
+    required TResult Function() loadedNews,
     required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
     required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
   }) {
     return refreshTopNews();
   }
@@ -656,9 +1220,14 @@ class _$_RefreshTopNews implements _RefreshTopNews {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(ScrollController? scrollController)? init,
     TResult? Function()? loadingNews,
-    TResult? Function()? loadNews,
+    TResult? Function()? loadedNews,
     TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
     TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
   }) {
     return refreshTopNews?.call();
   }
@@ -668,9 +1237,14 @@ class _$_RefreshTopNews implements _RefreshTopNews {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ScrollController? scrollController)? init,
     TResult Function()? loadingNews,
-    TResult Function()? loadNews,
+    TResult Function()? loadedNews,
     TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
     TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
     required TResult orElse(),
   }) {
     if (refreshTopNews != null) {
@@ -684,9 +1258,16 @@ class _$_RefreshTopNews implements _RefreshTopNews {
   TResult map<TResult extends Object?>({
     required TResult Function(_InitNews value) init,
     required TResult Function(_LoadingNews value) loadingNews,
-    required TResult Function(_LoadNews value) loadNews,
+    required TResult Function(_LoadNews value) loadedNews,
     required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
     required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
   }) {
     return refreshTopNews(this);
   }
@@ -696,9 +1277,15 @@ class _$_RefreshTopNews implements _RefreshTopNews {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitNews value)? init,
     TResult? Function(_LoadingNews value)? loadingNews,
-    TResult? Function(_LoadNews value)? loadNews,
+    TResult? Function(_LoadNews value)? loadedNews,
     TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
     TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
   }) {
     return refreshTopNews?.call(this);
   }
@@ -708,9 +1295,15 @@ class _$_RefreshTopNews implements _RefreshTopNews {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitNews value)? init,
     TResult Function(_LoadingNews value)? loadingNews,
-    TResult Function(_LoadNews value)? loadNews,
+    TResult Function(_LoadNews value)? loadedNews,
     TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
     TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
     required TResult orElse(),
   }) {
     if (refreshTopNews != null) {
@@ -722,6 +1315,568 @@ class _$_RefreshTopNews implements _RefreshTopNews {
 
 abstract class _RefreshTopNews implements NewsEvent {
   const factory _RefreshTopNews() = _$_RefreshTopNews;
+}
+
+/// @nodoc
+abstract class _$$_ToggleTopFavoriteArticlesCopyWith<$Res> {
+  factory _$$_ToggleTopFavoriteArticlesCopyWith(
+          _$_ToggleTopFavoriteArticles value,
+          $Res Function(_$_ToggleTopFavoriteArticles) then) =
+      __$$_ToggleTopFavoriteArticlesCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
+}
+
+/// @nodoc
+class __$$_ToggleTopFavoriteArticlesCopyWithImpl<$Res>
+    extends _$NewsEventCopyWithImpl<$Res, _$_ToggleTopFavoriteArticles>
+    implements _$$_ToggleTopFavoriteArticlesCopyWith<$Res> {
+  __$$_ToggleTopFavoriteArticlesCopyWithImpl(
+      _$_ToggleTopFavoriteArticles _value,
+      $Res Function(_$_ToggleTopFavoriteArticles) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$_ToggleTopFavoriteArticles(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ToggleTopFavoriteArticles implements _ToggleTopFavoriteArticles {
+  const _$_ToggleTopFavoriteArticles(this.index);
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'NewsEvent.toggleTopFavoriteArticle(index: $index)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ToggleTopFavoriteArticles &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ToggleTopFavoriteArticlesCopyWith<_$_ToggleTopFavoriteArticles>
+      get copyWith => __$$_ToggleTopFavoriteArticlesCopyWithImpl<
+          _$_ToggleTopFavoriteArticles>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
+    required TResult Function() loadedNews,
+    required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
+    required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
+  }) {
+    return toggleTopFavoriteArticle(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
+    TResult? Function()? loadedNews,
+    TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
+    TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
+  }) {
+    return toggleTopFavoriteArticle?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
+    TResult Function()? loadedNews,
+    TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
+    TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (toggleTopFavoriteArticle != null) {
+      return toggleTopFavoriteArticle(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
+    required TResult Function(_LoadNews value) loadedNews,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
+  }) {
+    return toggleTopFavoriteArticle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
+    TResult? Function(_LoadNews value)? loadedNews,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
+  }) {
+    return toggleTopFavoriteArticle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
+    TResult Function(_LoadNews value)? loadedNews,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (toggleTopFavoriteArticle != null) {
+      return toggleTopFavoriteArticle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ToggleTopFavoriteArticles implements NewsEvent {
+  const factory _ToggleTopFavoriteArticles(final int index) =
+      _$_ToggleTopFavoriteArticles;
+
+  int get index;
+  @JsonKey(ignore: true)
+  _$$_ToggleTopFavoriteArticlesCopyWith<_$_ToggleTopFavoriteArticles>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_ToggleFavoriteArticlesCopyWith<$Res> {
+  factory _$$_ToggleFavoriteArticlesCopyWith(_$_ToggleFavoriteArticles value,
+          $Res Function(_$_ToggleFavoriteArticles) then) =
+      __$$_ToggleFavoriteArticlesCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
+}
+
+/// @nodoc
+class __$$_ToggleFavoriteArticlesCopyWithImpl<$Res>
+    extends _$NewsEventCopyWithImpl<$Res, _$_ToggleFavoriteArticles>
+    implements _$$_ToggleFavoriteArticlesCopyWith<$Res> {
+  __$$_ToggleFavoriteArticlesCopyWithImpl(_$_ToggleFavoriteArticles _value,
+      $Res Function(_$_ToggleFavoriteArticles) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$_ToggleFavoriteArticles(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ToggleFavoriteArticles implements _ToggleFavoriteArticles {
+  const _$_ToggleFavoriteArticles(this.index);
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'NewsEvent.toggleFavoriteArticle(index: $index)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ToggleFavoriteArticles &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ToggleFavoriteArticlesCopyWith<_$_ToggleFavoriteArticles> get copyWith =>
+      __$$_ToggleFavoriteArticlesCopyWithImpl<_$_ToggleFavoriteArticles>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
+    required TResult Function() loadedNews,
+    required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
+    required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
+  }) {
+    return toggleFavoriteArticle(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
+    TResult? Function()? loadedNews,
+    TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
+    TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
+  }) {
+    return toggleFavoriteArticle?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
+    TResult Function()? loadedNews,
+    TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
+    TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (toggleFavoriteArticle != null) {
+      return toggleFavoriteArticle(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
+    required TResult Function(_LoadNews value) loadedNews,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
+  }) {
+    return toggleFavoriteArticle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
+    TResult? Function(_LoadNews value)? loadedNews,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
+  }) {
+    return toggleFavoriteArticle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
+    TResult Function(_LoadNews value)? loadedNews,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (toggleFavoriteArticle != null) {
+      return toggleFavoriteArticle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ToggleFavoriteArticles implements NewsEvent {
+  const factory _ToggleFavoriteArticles(final int index) =
+      _$_ToggleFavoriteArticles;
+
+  int get index;
+  @JsonKey(ignore: true)
+  _$$_ToggleFavoriteArticlesCopyWith<_$_ToggleFavoriteArticles> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_AddedFavoritePageCopyWith<$Res> {
+  factory _$$_AddedFavoritePageCopyWith(_$_AddedFavoritePage value,
+          $Res Function(_$_AddedFavoritePage) then) =
+      __$$_AddedFavoritePageCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
+}
+
+/// @nodoc
+class __$$_AddedFavoritePageCopyWithImpl<$Res>
+    extends _$NewsEventCopyWithImpl<$Res, _$_AddedFavoritePage>
+    implements _$$_AddedFavoritePageCopyWith<$Res> {
+  __$$_AddedFavoritePageCopyWithImpl(
+      _$_AddedFavoritePage _value, $Res Function(_$_AddedFavoritePage) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$_AddedFavoritePage(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_AddedFavoritePage implements _AddedFavoritePage {
+  const _$_AddedFavoritePage(this.index);
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'NewsEvent.addedFavoritePage(index: $index)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_AddedFavoritePage &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_AddedFavoritePageCopyWith<_$_AddedFavoritePage> get copyWith =>
+      __$$_AddedFavoritePageCopyWithImpl<_$_AddedFavoritePage>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(ScrollController? scrollController) init,
+    required TResult Function() loadingNews,
+    required TResult Function() loadedNews,
+    required TResult Function() refresh,
+    required TResult Function(List<ArticleEntity> articles) getFavorite,
+    required TResult Function(ArticleEntity article) setFavorite,
+    required TResult Function() refreshTopNews,
+    required TResult Function(int index) toggleTopFavoriteArticle,
+    required TResult Function(int index) toggleFavoriteArticle,
+    required TResult Function(int index) addedFavoritePage,
+  }) {
+    return addedFavoritePage(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(ScrollController? scrollController)? init,
+    TResult? Function()? loadingNews,
+    TResult? Function()? loadedNews,
+    TResult? Function()? refresh,
+    TResult? Function(List<ArticleEntity> articles)? getFavorite,
+    TResult? Function(ArticleEntity article)? setFavorite,
+    TResult? Function()? refreshTopNews,
+    TResult? Function(int index)? toggleTopFavoriteArticle,
+    TResult? Function(int index)? toggleFavoriteArticle,
+    TResult? Function(int index)? addedFavoritePage,
+  }) {
+    return addedFavoritePage?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(ScrollController? scrollController)? init,
+    TResult Function()? loadingNews,
+    TResult Function()? loadedNews,
+    TResult Function()? refresh,
+    TResult Function(List<ArticleEntity> articles)? getFavorite,
+    TResult Function(ArticleEntity article)? setFavorite,
+    TResult Function()? refreshTopNews,
+    TResult Function(int index)? toggleTopFavoriteArticle,
+    TResult Function(int index)? toggleFavoriteArticle,
+    TResult Function(int index)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (addedFavoritePage != null) {
+      return addedFavoritePage(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitNews value) init,
+    required TResult Function(_LoadingNews value) loadingNews,
+    required TResult Function(_LoadNews value) loadedNews,
+    required TResult Function(_RefreshNews value) refresh,
+    required TResult Function(_GetFavoriteNews value) getFavorite,
+    required TResult Function(_SetFavoriteNews value) setFavorite,
+    required TResult Function(_RefreshTopNews value) refreshTopNews,
+    required TResult Function(_ToggleTopFavoriteArticles value)
+        toggleTopFavoriteArticle,
+    required TResult Function(_ToggleFavoriteArticles value)
+        toggleFavoriteArticle,
+    required TResult Function(_AddedFavoritePage value) addedFavoritePage,
+  }) {
+    return addedFavoritePage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitNews value)? init,
+    TResult? Function(_LoadingNews value)? loadingNews,
+    TResult? Function(_LoadNews value)? loadedNews,
+    TResult? Function(_RefreshNews value)? refresh,
+    TResult? Function(_GetFavoriteNews value)? getFavorite,
+    TResult? Function(_SetFavoriteNews value)? setFavorite,
+    TResult? Function(_RefreshTopNews value)? refreshTopNews,
+    TResult? Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult? Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult? Function(_AddedFavoritePage value)? addedFavoritePage,
+  }) {
+    return addedFavoritePage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitNews value)? init,
+    TResult Function(_LoadingNews value)? loadingNews,
+    TResult Function(_LoadNews value)? loadedNews,
+    TResult Function(_RefreshNews value)? refresh,
+    TResult Function(_GetFavoriteNews value)? getFavorite,
+    TResult Function(_SetFavoriteNews value)? setFavorite,
+    TResult Function(_RefreshTopNews value)? refreshTopNews,
+    TResult Function(_ToggleTopFavoriteArticles value)?
+        toggleTopFavoriteArticle,
+    TResult Function(_ToggleFavoriteArticles value)? toggleFavoriteArticle,
+    TResult Function(_AddedFavoritePage value)? addedFavoritePage,
+    required TResult orElse(),
+  }) {
+    if (addedFavoritePage != null) {
+      return addedFavoritePage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddedFavoritePage implements NewsEvent {
+  const factory _AddedFavoritePage(final int index) = _$_AddedFavoritePage;
+
+  int get index;
+  @JsonKey(ignore: true)
+  _$$_AddedFavoritePageCopyWith<_$_AddedFavoritePage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1155,9 +2310,11 @@ abstract class _Loaded implements NewsState {
 mixin _$NewsViewModel {
   ScrollController? get scrollController => throw _privateConstructorUsedError;
   bool get isInitNews => throw _privateConstructorUsedError;
+  bool get isFavorite => throw _privateConstructorUsedError;
   int get newsPage => throw _privateConstructorUsedError;
   List<ArticleEntity> get articleList => throw _privateConstructorUsedError;
   List<ArticleEntity> get topArticleList => throw _privateConstructorUsedError;
+  List<ArticleEntity> get favoriteList => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NewsViewModelCopyWith<NewsViewModel> get copyWith =>
@@ -1173,9 +2330,11 @@ abstract class $NewsViewModelCopyWith<$Res> {
   $Res call(
       {ScrollController? scrollController,
       bool isInitNews,
+      bool isFavorite,
       int newsPage,
       List<ArticleEntity> articleList,
-      List<ArticleEntity> topArticleList});
+      List<ArticleEntity> topArticleList,
+      List<ArticleEntity> favoriteList});
 }
 
 /// @nodoc
@@ -1193,9 +2352,11 @@ class _$NewsViewModelCopyWithImpl<$Res, $Val extends NewsViewModel>
   $Res call({
     Object? scrollController = freezed,
     Object? isInitNews = null,
+    Object? isFavorite = null,
     Object? newsPage = null,
     Object? articleList = null,
     Object? topArticleList = null,
+    Object? favoriteList = null,
   }) {
     return _then(_value.copyWith(
       scrollController: freezed == scrollController
@@ -1205,6 +2366,10 @@ class _$NewsViewModelCopyWithImpl<$Res, $Val extends NewsViewModel>
       isInitNews: null == isInitNews
           ? _value.isInitNews
           : isInitNews // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFavorite: null == isFavorite
+          ? _value.isFavorite
+          : isFavorite // ignore: cast_nullable_to_non_nullable
               as bool,
       newsPage: null == newsPage
           ? _value.newsPage
@@ -1217,6 +2382,10 @@ class _$NewsViewModelCopyWithImpl<$Res, $Val extends NewsViewModel>
       topArticleList: null == topArticleList
           ? _value.topArticleList
           : topArticleList // ignore: cast_nullable_to_non_nullable
+              as List<ArticleEntity>,
+      favoriteList: null == favoriteList
+          ? _value.favoriteList
+          : favoriteList // ignore: cast_nullable_to_non_nullable
               as List<ArticleEntity>,
     ) as $Val);
   }
@@ -1233,9 +2402,11 @@ abstract class _$$_NewsViewModelCopyWith<$Res>
   $Res call(
       {ScrollController? scrollController,
       bool isInitNews,
+      bool isFavorite,
       int newsPage,
       List<ArticleEntity> articleList,
-      List<ArticleEntity> topArticleList});
+      List<ArticleEntity> topArticleList,
+      List<ArticleEntity> favoriteList});
 }
 
 /// @nodoc
@@ -1251,9 +2422,11 @@ class __$$_NewsViewModelCopyWithImpl<$Res>
   $Res call({
     Object? scrollController = freezed,
     Object? isInitNews = null,
+    Object? isFavorite = null,
     Object? newsPage = null,
     Object? articleList = null,
     Object? topArticleList = null,
+    Object? favoriteList = null,
   }) {
     return _then(_$_NewsViewModel(
       scrollController: freezed == scrollController
@@ -1263,6 +2436,10 @@ class __$$_NewsViewModelCopyWithImpl<$Res>
       isInitNews: null == isInitNews
           ? _value.isInitNews
           : isInitNews // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFavorite: null == isFavorite
+          ? _value.isFavorite
+          : isFavorite // ignore: cast_nullable_to_non_nullable
               as bool,
       newsPage: null == newsPage
           ? _value.newsPage
@@ -1276,6 +2453,10 @@ class __$$_NewsViewModelCopyWithImpl<$Res>
           ? _value._topArticleList
           : topArticleList // ignore: cast_nullable_to_non_nullable
               as List<ArticleEntity>,
+      favoriteList: null == favoriteList
+          ? _value._favoriteList
+          : favoriteList // ignore: cast_nullable_to_non_nullable
+              as List<ArticleEntity>,
     ));
   }
 }
@@ -1286,17 +2467,23 @@ class _$_NewsViewModel implements _NewsViewModel {
   const _$_NewsViewModel(
       {this.scrollController,
       this.isInitNews = false,
+      this.isFavorite = false,
       this.newsPage = 1,
       final List<ArticleEntity> articleList = const [],
-      final List<ArticleEntity> topArticleList = const []})
+      final List<ArticleEntity> topArticleList = const [],
+      final List<ArticleEntity> favoriteList = const []})
       : _articleList = articleList,
-        _topArticleList = topArticleList;
+        _topArticleList = topArticleList,
+        _favoriteList = favoriteList;
 
   @override
   final ScrollController? scrollController;
   @override
   @JsonKey()
   final bool isInitNews;
+  @override
+  @JsonKey()
+  final bool isFavorite;
   @override
   @JsonKey()
   final int newsPage;
@@ -1318,9 +2505,18 @@ class _$_NewsViewModel implements _NewsViewModel {
     return EqualUnmodifiableListView(_topArticleList);
   }
 
+  final List<ArticleEntity> _favoriteList;
+  @override
+  @JsonKey()
+  List<ArticleEntity> get favoriteList {
+    if (_favoriteList is EqualUnmodifiableListView) return _favoriteList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_favoriteList);
+  }
+
   @override
   String toString() {
-    return 'NewsViewModel(scrollController: $scrollController, isInitNews: $isInitNews, newsPage: $newsPage, articleList: $articleList, topArticleList: $topArticleList)';
+    return 'NewsViewModel(scrollController: $scrollController, isInitNews: $isInitNews, isFavorite: $isFavorite, newsPage: $newsPage, articleList: $articleList, topArticleList: $topArticleList, favoriteList: $favoriteList)';
   }
 
   @override
@@ -1332,12 +2528,16 @@ class _$_NewsViewModel implements _NewsViewModel {
                 other.scrollController == scrollController) &&
             (identical(other.isInitNews, isInitNews) ||
                 other.isInitNews == isInitNews) &&
+            (identical(other.isFavorite, isFavorite) ||
+                other.isFavorite == isFavorite) &&
             (identical(other.newsPage, newsPage) ||
                 other.newsPage == newsPage) &&
             const DeepCollectionEquality()
                 .equals(other._articleList, _articleList) &&
             const DeepCollectionEquality()
-                .equals(other._topArticleList, _topArticleList));
+                .equals(other._topArticleList, _topArticleList) &&
+            const DeepCollectionEquality()
+                .equals(other._favoriteList, _favoriteList));
   }
 
   @override
@@ -1345,9 +2545,11 @@ class _$_NewsViewModel implements _NewsViewModel {
       runtimeType,
       scrollController,
       isInitNews,
+      isFavorite,
       newsPage,
       const DeepCollectionEquality().hash(_articleList),
-      const DeepCollectionEquality().hash(_topArticleList));
+      const DeepCollectionEquality().hash(_topArticleList),
+      const DeepCollectionEquality().hash(_favoriteList));
 
   @JsonKey(ignore: true)
   @override
@@ -1360,20 +2562,26 @@ abstract class _NewsViewModel implements NewsViewModel {
   const factory _NewsViewModel(
       {final ScrollController? scrollController,
       final bool isInitNews,
+      final bool isFavorite,
       final int newsPage,
       final List<ArticleEntity> articleList,
-      final List<ArticleEntity> topArticleList}) = _$_NewsViewModel;
+      final List<ArticleEntity> topArticleList,
+      final List<ArticleEntity> favoriteList}) = _$_NewsViewModel;
 
   @override
   ScrollController? get scrollController;
   @override
   bool get isInitNews;
   @override
+  bool get isFavorite;
+  @override
   int get newsPage;
   @override
   List<ArticleEntity> get articleList;
   @override
   List<ArticleEntity> get topArticleList;
+  @override
+  List<ArticleEntity> get favoriteList;
   @override
   @JsonKey(ignore: true)
   _$$_NewsViewModelCopyWith<_$_NewsViewModel> get copyWith =>

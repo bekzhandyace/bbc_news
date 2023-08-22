@@ -190,13 +190,13 @@ class __$$_ArticleCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Article implements _Article {
   _$_Article(
-      {required this.author,
-      required this.title,
-      required this.description,
-      required this.url,
-      required this.urlToImage,
-      required this.publishAt,
-      required this.content,
+      {this.author,
+      this.title,
+      this.description,
+      this.url,
+      this.urlToImage,
+      this.publishAt,
+      this.content,
       this.isFavorite = false});
 
   factory _$_Article.fromJson(Map<String, dynamic> json) =>
@@ -265,13 +265,13 @@ class _$_Article implements _Article {
 
 abstract class _Article implements ArticleEntity {
   factory _Article(
-      {required final String? author,
-      required final String? title,
-      required final String? description,
-      required final String? url,
-      required final String? urlToImage,
-      required final String? publishAt,
-      required final String? content,
+      {final String? author,
+      final String? title,
+      final String? description,
+      final String? url,
+      final String? urlToImage,
+      final String? publishAt,
+      final String? content,
       final bool isFavorite}) = _$_Article;
 
   factory _Article.fromJson(Map<String, dynamic> json) = _$_Article.fromJson;

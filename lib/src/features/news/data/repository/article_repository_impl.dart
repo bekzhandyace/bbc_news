@@ -18,14 +18,14 @@ class ArticleRepositoryImpl implements IArticleRepository {
   @override
   Future<List<ArticleEntity>> getAllArticles(int page) async {
     return await _getArticles(() {
-      return _articleRemoteImpl.fetchAllArticles();
+      return _articleRemoteImpl.fetchAllArticles(page);
     });
   }
 
   @override
   Future<List<ArticleEntity>> getTopArticles(int page) async {
     return await _getArticles((){
-      return _articleRemoteImpl.fetchTopArticles();
+      return _articleRemoteImpl.fetchTopArticles(page);
     });
   }
 

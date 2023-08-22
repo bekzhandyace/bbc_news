@@ -5,7 +5,6 @@ import '../repository/i_favorite_repository.dart';
 
 
 enum NewsType { all, top }
-
 class GetArticlesUseCase {
   final IArticleRepository _articleRepository;
   final IFavoriteRepository _favoriteRepository;

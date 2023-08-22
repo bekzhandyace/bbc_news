@@ -1,7 +1,6 @@
 import 'package:bbc_news/src/core/base/base_bloc/bloc/base_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../context/bloc/context_activity_bloc.dart';
 
 typedef BaseBlocWidgetBuilder<B, S> = Widget Function(
